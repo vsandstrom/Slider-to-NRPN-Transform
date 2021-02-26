@@ -8,7 +8,7 @@
 
 ///////// Global Variables
 (
-~scale = 16383; // assigns the maximum value the slider-data gets transformed into
+~scale = 16383; // assigns the maximum value the slider-data gets transformed into. Ex: The cutoff pot on a Prophet Rev2 only has a maximum of 164 steps, 0-163. (MSB: 1,  LSB: 35)
 
  // creates arrays for the split data to get stored into
 ~sliderMSB = []; // Most valuable bit
