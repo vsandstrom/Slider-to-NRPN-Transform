@@ -1,4 +1,4 @@
-///////// Window
+// Window
 
 (
 ~gui = Window.new(\gui_test, Rect(200, 50, 195, 200)); // Creates a window with a slider
@@ -6,16 +6,19 @@
 ~gui.front;
 )
 
-///////// Global Variables
-(
-~scale = 16383; // assigns the maximum value the slider-data gets transformed into. Ex: The cutoff pot on a Prophet Rev2 only has a maximum of 164 steps, 0-163. (MSB: 1,  LSB: 35)
+// Global Variables
 
- // creates arrays for the split data to get stored into
+(
+// assigns the maximum value the slider-data gets transformed into. Ex: The cutoff pot on a Prophet Rev2 only has a maximum of 164 steps, 0-163. (MSB: 1,  LSB: 35)
+~scale = 16383; 
+
+// creates arrays for the split data to get stored into
+ 
 ~sliderMSB = []; // Most significant byte
 ~sliderLSB = []; // Least significant byte
 )
 
-///////// Slider action function
+// Slider action function
 
 (
 ~slider.action_({ // Transforms the slider output to something useful
@@ -27,7 +30,7 @@
 });
 )
 
-////////// Postln Task TODO: MIDIOut Message implemetation
+// Postln Task TODO: MIDIOut Message implemetation
 
 (
 ~guiTask = Task({ // Using Task to print the output from the slider action function.
